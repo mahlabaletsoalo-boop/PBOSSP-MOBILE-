@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mpelogic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="top-banner">Book Your Fresh Look Today!</div>
+        <nav>
+    <div class="logo">✂ PBOSSP</div>
+    
+    <!-- Hamburger Menu -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    
+    <ul id="nav-links">
+        <li><a href="pagefive.html">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="Aboutus.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><button class="book-btn">Book Now</button></li>
+    </ul>
+</nav>
+    </header>
+
+     <div class="background"></div>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <h1>Find Your Perfect Cut</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search styles, barbers, locations...">
+            <button>🔍</button>
+        </div>
+        <div class="tags">
+            <span>Fades</span>
+            <span>Shaves</span>
+            <span>Beard Trim</span>
+            <span>Kids Cuts</span>
+        </div>
+    </section>
+
+<section class="categories">
+    <h2>Browse Our Services</h2>
+    <div class="category-grid">
+        <button class="category-card" onclick="location.href='haircuts.html'">Haircuts</button>
+        <button class="category-card" onclick="location.href='Bread.html'">Beard Trim</button>
+        <button class="category-card" onclick="location.href='Shave.html'">Shaves</button>
+        <button class="category-card" onclick="location.href='kidhaircuts.html'">Kids Cuts</button>
+        <button class="category-card" onclick="location.href='haircoloring.html'">Hair Coloring</button>
+        <button class="category-card" onclick="location.href='Package.html'">Packages</button>
+    </div>
+</section>
+
+<script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+</script>
+<!-- ...existing code... -->
+
+</body>
+</html>
