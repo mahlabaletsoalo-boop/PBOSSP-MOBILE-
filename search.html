@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mpelogic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="top-banner">Book Your Fresh Look Today!</div>
+        <nav>
+            <div class="logo">✂ PBOSSP</div>
+            
+            <!-- Hamburger Menu -->
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+            
+            <ul id="nav-links">
+                <li><a href="pagefive.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="Aboutus.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><button class="book-btn">Book Now</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="background"></div>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <h1>Find Your Perfect Cut</h1>
+        <div class="search-bar">
+            <form onsubmit="return searchSite()">
+                <input type="text" id="searchInput" placeholder="Search styles, barbers, locations...">
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+        <div class="tags">
+            <span onclick="window.location.href='haircuts.html'">Fades</span>
+            <span onclick="window.location.href='Shave.html'">Shaves</span>
+            <span onclick="window.location.href='Bread.html'">Beard Trim</span>
+            <span onclick="window.location.href='kidhaircuts.html'">Kids Cuts</span>
+        </div>
+    </section>
+
+    <section class="categories">
+        <h2>Browse Our Services</h2>
+        <div class="category-grid">
+            <button class="category-card" onclick="location.href='haircuts.html'">Haircuts</button>
+            <button class="category-card" onclick="location.href='Bread.html'">Beard Trim</button>
+            <button class="category-card" onclick="location.href='Shave.html'">Shaves</button>
+            <button class="category-card" onclick="location.href='kidhaircuts.html'">Kids Cuts</button>
+            <button class="category-card" onclick="location.href='haircoloring.html'">Hair Coloring</button>
+            <button class="category-card" onclick="location.href='Package.html'">Packages</button>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu toggle
+        const toggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        toggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+        // Search functionality
+        const services = [
+            { name: "Haircuts", url: "haircuts.html" },
+            { name: "Beard Trim", url: "Bread.html" },
+            { name: "Shaves", url: "Shave.html" },
+            { name: "Kids Cuts", url: "kidhaircuts.html" },
+            { name: "Hair Coloring", url: "haircoloring.html" },
+            { name: "Packages", url: "Package.html" },
+            { name: "taperfade", url: "taperfade.html"},
+            { name: "Mohawk", url: "Mohawk.html"},
+            { name: "Booking", url: "Booking.html"},
+            { name: "About Us", url: "Aboutus.html"},
+            { name: "Contact", url: "Contact.html"},
+            { name: "fade", url: "Fades.html"},
+            { name: "shave", url: "Shave.html"},
+            { name: "beard", url: "Bread.html"},
+            { name: "kid", url: "kidhaircuts.html"},
+            { name: "cut and dye", url: "haircoloring.html"},
+            { name: "Bundle", url: "Package.html"},
+        ];
+
+        function searchSite() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            let match = services.find(service => service.name.toLowerCase().includes(input));
+
+            if (match) {
+                window.location.href = match.url; // Redirect to page
+            } else {
+                alert("No results found. Please try again.");
+            }
+            return false; // Prevent form refresh
+        }
+    </script>
+</body>
+</html>

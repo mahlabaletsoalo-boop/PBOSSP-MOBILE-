@@ -1,0 +1,159 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #fff;
+  background-image: url("Hotels Business Website (2).png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: fadeIn 1.5s ease-in forwards;
+}
+ .back-btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 100;
+        padding: 10px 24px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    .back-btn:hover {
+        background-color: #555;
+    }
+
+/* Headings */
+.content {
+  text-align: center;
+  padding: 40px;
+}
+
+h3 {
+  font-size: 16px;
+  letter-spacing: 4px;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+/* Grid styling */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  height: auto;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.8);
+}
+
+/*bottom btn*/
+.big-btn {
+  background: black;
+  color: white;
+  padding: 14px 60px;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  position: fixed;   /* stays at the bottom */
+  bottom: 20px;      /* distance from bottom */
+  left: 50%;         /* center horizontally */
+  transform: translateX(-50%); /* adjust to exact middle */
+
+  text-align: center;
+  z-index: 999; /* keep it above other elements */
+}
+/* Book Now area under image */
+.card-footer {
+  text-align: center;
+  margin-top: 15px;
+}
+
+
+.big-btn:hover {
+  background: #f8054e00;
+  transform: scale(1.05);
+}
+
+/* Remove circle buttons */
+.circle-btn {
+  display: none;
+}
+
+/* Background colors (not used for overlay now, but kept if needed) */
+.red { background: #f8054e00; }
+.purple { background: #9900ff00; }
+.gray { background: #ddd; color: black; }
+.dark { background: #333; }
+
+/* --- MOBILE RESPONSIVE FIX --- */
+@media (max-width: 768px) {
+  .grid {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 20px;
+  }
+
+  .card {
+    width: 300px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  .card img {
+    height: 400px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+}
