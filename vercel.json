@@ -1,3 +1,13 @@
 {
     "rewrites": [{ "source": "/(.*)", "destination": "/pagefive.html" }]
+
+}
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://pbossp.co.za/$1",
+      "permanent": true
+    }
+  ]
 }
