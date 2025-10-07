@@ -1,16 +1,1 @@
-{
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "https://pbossp.co.za/$1",
-      "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/pagefive.html"
-    }
-  ]
-}
-
+{ "rewrites": [{ "source": "/(.*)", "destination": "/pagefive.html" }] }
